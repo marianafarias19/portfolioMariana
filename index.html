@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariana Farias</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+    
+    <!-- indicador de progresso ao rolar a página -->
+    <div class="scroll-indicator"></div>
+    
+    <!-- barra de navegação -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50 transition-colors duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link interactive-element text-gray-700 hover:text-violet-500 transition">Início</a>
+                <a href="#about" class="nav-link interactive-element text-gray-700 hover:text-violet-500 transition">Sobre</a>
+                <a href="#skills" class="nav-link interactive-element text-gray-700 hover:text-violet-500 transition">Habilidades</a>
+                <a href="#projects" class="nav-link interactive-element text-gray-700 hover:text-violet-500 transition">Projetos</a>
+                <a href="#contact" class="nav-link interactive-element text-gray-700 hover:text-violet-500 transition">Contato</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div id="theme-toggle" class="theme-toggle interactive-element w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                    <i class="fas fa-moon text-gray-600"></i>
+                </div>
+                
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none interactive-element">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t transition-colors duration-300">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#home" class="text-gray-700 hover:text-violet-500 transition py-2">Início</a>
+                <a href="#about" class="text-gray-700 hover:text-violet-500 transition py-2">Sobre</a>
+                <a href="#skills" class="text-gray-700 hover:text-violet-500 transition py-2">Habilidades</a>
+                <a href="#projects" class="text-gray-700 hover:text-violet-500 transition py-2">Projetos</a>
+                <a href="#contact" class="text-gray-700 hover:text-violet-500 transition py-2">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- sessão principal -->
+    <section id="home" class="py-20 md:py-32 transition-colors duration-300">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 animate-fade-in">Olá, eu sou <span class="text-violet-500">Mariana Farias</span></h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-600 animate-slide-up">Desenvolvedora Front-End</p>
+                <p class="text-gray-600 mb-8 animate-slide-up delay-100">Apaixonada por tecnologia e aprendizado, estou sempre criando projetos que unem funcionalidade e empatia.</p>
+                <div class="flex space-x-4 animate-slide-up delay-200">
+                    <a href="#projects" class="interactive-element bg-violet-400 hover:bg-violet-500 text-white px-6 py-3 rounded-lg font-medium transition">Meus Projetos</a>
+                    <a href="#contact" class="interactive-element bg-transparent border-2 border-violet-400 text-violet-500 hover:bg-violet-50 px-6 py-3 rounded-lg font-medium transition">Contato</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-fade-in delay-300">
+                <div class="relative">
+                    <img src="img/foto 1.jpg" alt="Foto" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-lg">
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-yellow-100 rounded-full"></div>
+                    <div class="absolute -top-4 -left-4 w-16 h-16 bg-green-100 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sessão sobre mim -->
+    <section id="about" class="py-20 bg-white transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Sobre Mim</h2>
+                <div class="w-24 h-1 bg-violet-400 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center max-w-5xl mx-auto">
+                <div class="md:w-2/5 mb-8 md:mb-0">
+                    <div class="relative">
+                    <img src="img/mariana.jpeg" alt="Foto Sobre Mim" class="w-64 h-96 rounded-lg shadow-sm object-cover">
+                    </div>
+                </div>
+                
+                <div class="md:w-3/5 md:pl-12">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Quem sou eu</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Sou estudante de Análise e Desenvolvimento de Sistemas, tenho 21 anos e sou apaixonada por tecnologia. Desde que comecei a programar, tenho me dedicado a criar soluções que tornem o dia a dia das pessoas mais prático e organizado.
+                            Atualmente, estou em busca da minha primeira oportunidade profissional na área de desenvolvimento. Quero fazer parte de uma equipe onde eu possa continuar aprendendo, contribuir com minhas habilidades e crescer como desenvolvedora em projetos que tenham impacto positivo na vida das pessoas.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Minha jornada</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Minha jornada na programação começou em 2023, quando terminei o ensino médio e ainda não sabia ao certo que caminho seguir. Foi então que me apresentaram à área da tecnologia. Decidi pesquisar mais sobre o assunto e, entre as diversas opções dentro da tecnologia, me identifiquei com a programação e me apaixonei pelo front-end!
+                            Sempre gostei de coisas “bonitinhas”, e fiquei encantada ao conseguir dar vida ao meu primeiro site com a ajuda do primeiro curso de JavaScript que fiz. A partir daí, continuei fazendo cursos e desenvolvendo projetos para aprimorar meus conhecimentos. Em 2024, decidi entrar na faculdade e comecei o curso de Análise e Desenvolvimento de Sistemas. Desde então, venho trabalhando em diversos projetos que têm me permitido desenvolver um conjunto diversificado de habilidades técnicas e criativas.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Nome:</h4>
+                            <p class="text-gray-600">Mariana Farias Araújo dos Santos</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Email:</h4>
+                            <p class="text-gray-600">mari.afs112015@gmail.com</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Localização:</h4>
+                            <p class="text-gray-600">Santo Antônio do Descoberto, Goiás</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Disponibilidade:</h4>
+                            <p class="text-gray-600">Disponível para vagas de desenvolvedora front-end (júnior/estágio) e projetos freelancers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sessão sobre habilidades -->
+    <section id="skills" class="py-20 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Minhas Habilidades</h2>
+                <div class="w-24 h-1 bg-violet-400 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="skill-category">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-code text-violet-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Frontend</h3>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">HTML/CSS</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">JavaScript</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">React</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Tailwind CSS</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Next Js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-server text-green-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Backend</h3>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Node.js</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Python(Básico)</span>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="skill-category">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-tools text-purple-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Ferramentas</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Git e GitHub</span>
+                            </div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Canva</span>
+                            </div>
+                            
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sessão de projetos -->
+    <section id="projects" class="py-20 bg-white transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Meus Projetos</h2>
+                <div class="w-24 h-1 bg-violet-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projeto 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-item" data-category="web">
+                    <div class="relative overflow-hidden group">
+                         <img src="img/projeto 1.jpg" alt="Café Aroma" class="h-48 w-full object-cover">
+                        <div class="absolute inset-0 bg-violet-500 bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-white text-center p-4">
+                                <div class="flex justify-center space-x-3">
+                                    <a href="https://cafearoma-cardapiodigital.netlify.app/" class="interactive-element bg-white text-violet-500 px-3 py-1 rounded-full text-sm hover:bg-violet-50 transition">Ver Demo</a>
+                                    <a href="https://github.com/marianafarias19/cafearoma-cardapiodigital" class="interactive-element bg-transparent border border-white text-white px-3 py-1 rounded-full text-sm hover:bg-white hover:text-violet-500 transition">Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Cardapio Online</h3>
+                    </div>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-item" data-category="web">
+                    <div class="relative overflow-hidden group">
+                         <img src="img/projeto 2.jpg" alt="PetLife" class="h-48 w-full object-cover">
+                        <div class="absolute inset-0 bg-violet-500 bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-white text-center p-4">
+                                <div class="flex justify-center space-x-3">
+                                    <a href="https://petshop-petlife.netlify.app/" class="interactive-element bg-white text-violet-500 px-3 py-1 rounded-full text-sm hover:bg-violet-50 transition">Ver Demo</a>
+                                    <a href="https://github.com/marianafarias19/landingpage" class="interactive-element bg-transparent border border-white text-white px-3 py-1 rounded-full text-sm hover:bg-white hover:text-violet-500 transition">Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">LandingPage de PetShop</h3>
+                    </div>
+                </div>
+                
+                <!-- Projeto 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-item" data-category="web">
+                    <div class="relative overflow-hidden group">
+                         <img src="img/projeto 3.jpg" alt="Organizador de remedios" class="h-48 w-full object-cover">
+                        <div class="absolute inset-0 bg-violet-500 bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-white text-center p-4">
+                                <div class="flex justify-center space-x-3">
+                                    <a href="https://remedioday.netlify.app/" class="interactive-element bg-white text-violet-500 px-3 py-1 rounded-full text-sm hover:bg-violet-50 transition">Ver Demo</a>
+                                    <a href="https://github.com/marianafarias19/Hora-do-Rem-dio" class="interactive-element bg-transparent border border-white text-white px-3 py-1 rounded-full text-sm hover:bg-white hover:text-violet-500 transition">Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Organizador de Remédios</h3>
+                    </div>
+                </div>
+                
+                <!-- Projeto 4 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-item" data-category="web">
+                    <div class="relative overflow-hidden group">
+                         <img src="img/projeto 4.jpg" alt="PetLife" class="h-48 w-full object-cover">
+                        <div class="absolute inset-0 bg-violet-500 bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-white text-center p-4">
+                                <div class="flex justify-center space-x-3">
+                                    <a href="https://cardapioonline-dburguer.netlify.app/" class="interactive-element bg-white text-violet-500 px-3 py-1 rounded-full text-sm hover:bg-violet-50 transition">Ver Demo</a>
+                                    <a href="https://github.com/marianafarias19/cardapioonline" class="interactive-element bg-transparent border border-white text-white px-3 py-1 rounded-full text-sm hover:bg-white hover:text-violet-500 transition">Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Cardapio online completo com Next Js</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sessão de contato -->
+    <section id="contact" class="py-20 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Entre em Contato</h2>
+                <div class="w-24 h-1 bg-violet-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- formulario de contato -->
+                <div class="bg-white rounded-lg shadow-sm p-8 border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800">Envie uma mensagem</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Nome</label>
+                            <input type="text" id="name" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-violet-400 transition bg-white" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-violet-400 transition bg-white" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-2">Assunto</label>
+                            <input type="text" id="subject" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-violet-400 transition bg-white" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-violet-400 transition bg-white" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-violet-400 hover:bg-violet-500 text-white font-medium py-3 rounded-lg transition interactive-element">Enviar Mensagem</button>
+                    </form>
+                </div>
+                
+                <!-- informações de contato -->
+                <div class="bg-white rounded-lg shadow-sm p-8 border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800">Informações de Contato</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-violet-50 flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-violet-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-700 font-medium">Email</h4>
+                                <p class="text-gray-600">mari.afs112015@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-violet-50 flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-violet-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-700 font-medium">Telefone</h4>
+                                <p class="text-gray-600">(61) 98666-8867</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-violet-50 flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-violet-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-700 font-medium">Localização</h4>
+                                <p class="text-gray-600">Santo Antõnio do Descoberto, Goiás, Brasil</p>
+                            </div>
+                        </div>
+                    <!-- Redes sociais -->
+                        <div class="pt-4">
+                            <h4 class="text-gray-700 font-medium mb-3">Redes Sociais</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/mariana-farias-/" class="interactive-element w-10 h-10 rounded-full bg-gray-50 hover:bg-violet-50 flex items-center justify-center transition">
+                                    <i class="fab fa-linkedin-in text-gray-600 hover:text-violet-400"></i>
+                                </a>
+                                <a href="https://github.com/marianafarias19" class="interactive-element w-10 h-10 rounded-full bg-gray-50 hover:bg-violet-50 flex items-center justify-center transition">
+                                    <i class="fab fa-github text-gray-600 hover:text-violet-400"></i>
+                                </a>
+                                <a href="https://www.instagram.com/mariana.farias__" class="interactive-element w-10 h-10 rounded-full bg-gray-50 hover:bg-violet-50 flex items-center justify-center transition">
+                                    <i class="fab fa-instagram text-gray-600 hover:text-violet-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 border-t border-gray-200 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600 mt-1">© 2025 Mariana Farias. Todos os direitos reservados</p>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="#home" class="text-gray-600 hover:text-violet-400 transition interactive-element">Início</a>
+                    <a href="#about" class="text-gray-600 hover:text-violet-400 transition interactive-element">Sobre</a>
+                    <a href="#skills" class="text-gray-600 hover:text-violet-400 transition interactive-element">Habilidades</a>
+                    <a href="#projects" class="text-gray-600 hover:text-violet-400 transition interactive-element">Projetos</a>
+                    <a href="#contact" class="text-gray-600 hover:text-violet-400 transition interactive-element">Contato</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
